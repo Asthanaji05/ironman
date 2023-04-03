@@ -1,0 +1,194 @@
+/*Body Elements*/
+html , body{
+    background-image: linear-gradient(180deg,#5d0101 20%,#db2312 30%,#069d90 50%, #064165 60%,#069d61 80%,red 90%, #650505 95% );
+    color:#ffdf00;
+    font-family: cursive;
+    text-align: center;
+    background-repeat:space;
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+
+}
+
+/*Header*/
+header{
+    color:#ffffff;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    position: sticky;
+    
+}
+h4{
+    color:#ffdf00; 
+}
+h1{
+    display:inline;
+    padding: 10px;
+    margin: 0px;
+    color:#ffdf00; 
+}
+h3{
+    display:inline;
+    padding: 10px;
+    margin: 0px; 
+}
+h5{
+  color:#d90a07;
+}
+.head{
+    display:flex;
+    padding: 50px;
+    height:max-content;
+    column-count: 1;
+    font-family: 'Delicious Handrawn', cursive;
+}
+.head p{
+    display:block;
+    border:solid 1px;
+    padding: 30px;
+    text-align: center;
+    background-color: #d19710;
+    color:#380100;
+    font-size: xx-large;
+}
+
+/* Making Iron Man Hovering */
+.dp{
+    height: 600px;
+    width:auto;
+    min-width: 100px;
+    transition:ease-in;
+    position: relative;
+    animation-duration: 3s;
+    animation-name: move-up; 
+    animation-iteration-count:15;
+    backface-visibility: hidden;
+}
+
+
+
+  @keyframes move-up {
+    from {
+      bottom: 100px;
+    }
+    to {
+      bottom: 2px;
+    }
+  }
+/*Making Website Responsive*/
+  @media only screen and (max-width: 600px) {
+    .dp{
+      width:100px;
+    height: 200px;
+    display: none;}
+    .head{
+      flex-direction: column;
+    }
+    }
+  @media only screen and (max-width: 800px) {
+    .dp{
+      display: none;
+    }
+    
+  }
+
+
+/*Experience*/
+.ex{
+    color:#ffffff;
+    font-size: larger;
+
+    
+}
+.ex button{
+  background-color: #050e4a;
+color: #ffffff;
+border-radius: 8px;
+border:solid 1px;
+border-color: #00e5ff;
+font-weight: bold;
+}
+/*Hire Me   Button*/
+  .hire{
+    background-color: #081f49;
+    color: #85d5e7;
+    border-radius: 8px;
+    border:solid 1px;
+    border-color: #03c8ff;
+    padding: 12px;
+    position: sticky;
+    font-weight: bolder;
+
+  }
+/*Slideshow*/
+@keyframes slide{
+  0%{content: url('sit.jpeg');}
+  15%{content: url('stone.jpg');}
+  30%{content: url('hover.jpg');}
+  50%{content: url('hero.jpeg');}
+  65%{content: url('gem.jpeg');}
+  100%{content: url('fly.jpeg');}
+}
+
+.slide{
+  margin: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.slide img{
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  width:300px;
+  height:350px;
+  border:solid 1px black;
+  border-radius: 15px 0px 15px 0px;
+  padding: 0px;
+  margin:2px;
+  bottom: 10px;
+  box-shadow: 2px 5px 11px black
+}
+
+/*Last Paragraph*/
+.caro{
+  height:max-content;
+  display:inline-flex;
+  padding:1px;
+   color:#ffffff; 
+  flex-direction: column;
+}
+/*Footer*/
+footer{
+  bottom: 0px;
+  background-color: black;
+  color:white;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height:100px;
+  
+}
+.icon{
+  height: 50px;
+  background-color: white;
+  width:max-content;
+
+}
+
+.love{
+  animation: mymove 10s infinite;
+}
+@keyframes mymove{
+  0% {background-color: blue;}
+ 10% {background-color: #089fdb;}
+ 20% {background-color: #1ddb08;}
+ 40% {background-color: yellow;}
+ 60% {background-color: orange;}
+ 80% {background-color: #db0828;}
+ 100% {background-color: purple;}
+}
