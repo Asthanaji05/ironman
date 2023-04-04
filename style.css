@@ -1,6 +1,6 @@
 /*Body Elements*/
 html , body{
-    background-image: linear-gradient(180deg,#5d0101 20%,#db2312 30%,#069d90 50%, #064165 60%,#069d61 80%,red 90%, #650505 95% );
+    background-image: linear-gradient(180deg,#5d0101 20%,#db2312 30%,#069d90 40%, #064165 60%,#069d61 70%,red 80%, #650505 90% );
     color:#ffdf00;
     font-family: cursive;
     text-align: center;
@@ -47,38 +47,41 @@ h5{
     font-family: 'Delicious Handrawn', cursive;
 }
 .head p{
-    display:block;
     border:solid 1px;
     padding: 30px;
     text-align: center;
     background-color: #d19710;
     color:#380100;
-    font-size: xx-large;
+    font-size:large;
+    flex-direction: column;
+    float: right;
+    margin-right: 10px;
 }
 
 /* Making Iron Man Hovering */
 .dp{
-    height: 600px;
-    width:auto;
-    min-width: 100px;
-    transition:ease-in;
-    position: relative;
-    animation-duration: 3s;
-    animation-name: move-up; 
-    animation-iteration-count:15;
-    backface-visibility: hidden;
+  height: 300px;
+  width:auto;
+  min-width: 100px;
+  transition:ease-in;
+  position: relative;
+  animation-duration: 3s;
+  animation-name: move-up; 
+  animation-iteration-count:15;
+  backface-visibility: hidden;
 }
-
-
-
-  @keyframes move-up {
-    from {
-      bottom: 100px;
-    }
-    to {
-      bottom: 2px;
-    }
+  .cardfe{
+    z-index: 1;
+    width:auto;
   }
+@keyframes move-up {
+  from {
+    bottom: 100px;
+  }
+  to {
+    bottom: 2px;
+  }
+}
 /*Making Website Responsive*/
   @media only screen and (max-width: 600px) {
     .dp{
@@ -92,8 +95,14 @@ h5{
   @media only screen and (max-width: 800px) {
     .dp{
       display: none;
+      
     }
-    
+    .head{
+      flex-direction: column;
+    }
+    .cardfe{
+      width:200px;
+    }
   }
 
 
@@ -105,24 +114,34 @@ h5{
     
 }
 .ex button{
-  background-color: #050e4a;
+  background-color: #1868b3;
+  opacity: 0.5;
 color: #ffffff;
 border-radius: 8px;
 border:solid 1px;
-border-color: #00e5ff;
+border-color: #073287;
 font-weight: bold;
+}
+.ex button:hover{
+  opacity: 1;
 }
 /*Hire Me   Button*/
   .hire{
-    background-color: #081f49;
-    color: #85d5e7;
+    background-color: #00f2ff;
+    color: #121082;
     border-radius: 8px;
-    border:solid 1px;
-    border-color: #03c8ff;
+    border:solid 2px;
+    border-color: #989c9d;
     padding: 12px;
     position: sticky;
     font-weight: bolder;
 
+  }
+  .hire:hover{
+    color:white;
+  }
+  .hire a:hover{
+    color:rgb(0, 0, 0);
   }
 /*Slideshow*/
 @keyframes slide{
@@ -170,25 +189,55 @@ footer{
   bottom: 0;
   width: 100%;
   text-align: center;
-  height:100px;
+  height:max-content;
+  margin-top: 0px;
   
 }
 .icon{
   height: 50px;
   background-color: white;
   width:max-content;
+  border-radius: 8px;
 
 }
-
+#github:hover{
+  background-color: #42ff03;
+}
+#marvel:hover{
+  background-color: rgb(255, 0, 0);
+}
+#linkedin:hover{
+  background-color: #0887db;
+}
+#stark:hover{
+  background-color: #dbcd08;
+}
 .love{
   animation: mymove 10s infinite;
+  border:none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: larger;
+  font-weight: bold;
+  color: white;
 }
 @keyframes mymove{
-  0% {background-color: blue;}
- 10% {background-color: #089fdb;}
- 20% {background-color: #1ddb08;}
- 40% {background-color: yellow;}
- 60% {background-color: orange;}
- 80% {background-color: #db0828;}
- 100% {background-color: purple;}
+  0% {background-color: purple;box-shadow: 5px 2px 11px #bb00ff;}
+  5% {background-color: blue; box-shadow: 7px 2px 11px rgb(2, 2, 32);}
+ 10% {background-color: #089fdb;box-shadow: 2px 3px 11px #00b7ff;}
+ 20% {background-color: #1ddb08;box-shadow: 7px 2px 11px #1eff00;}
+ 40% {background-color: yellow;box-shadow: 2px 3px 11px rgb(255, 255, 0);}
+ 60% {background-color: orange;box-shadow: 7px 2px 11px orangered;}
+ 80% {background-color: #db0828;box-shadow: 2px 5px 11px #ff0400;}
+ 100% {background-color: purple;box-shadow: 5px 2px 11px #bb00ff;}
+}
+
+.arc{
+  border-radius: 50%;
+   box-shadow:2px 2px 22px rgb(2, 22, 74);
+   border:none;
+   filter: grayscale(50%);
+}
+.arc:hover{
+  filter:grayscale(0%);
 }
